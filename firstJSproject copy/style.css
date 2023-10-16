@@ -1,0 +1,247 @@
+body {
+  margin: 0;
+  padding: 0;
+  font-family: "Roboto Mono", monospace;
+  background-color: #f4f3dd;
+}
+
+.header {
+  display: block;
+  padding: 20px 10px;
+  height: 50px;
+  width: 100%;
+  margin: 10px;
+}
+
+.header a {
+  text-align: center;
+  padding: 10px;
+  text-decoration: none;
+  border-radius: 30px;
+  color: white;
+  background: #4cb6b4;
+  border: 2px solid #f5b19d;
+  /* background-color: #1abc9c; */
+}
+/* .header input {
+  border-radius: 30px;
+  border: 2px solid #f5b19d;
+  font-size: 20px;
+  text-transform: capitalize;
+  letter-spacing: 3px;
+  text-align: center;
+  position: fixed;
+  right: 30px;
+  top: 30px;
+}
+
+.header input::placeholder {
+  font-weight: 50;
+} */
+
+.container {
+  display: flex;
+  flex-direction: row;
+  /* align-items: flex-end; Center-align both h1 and img vertically */
+  /* justify-content: space-between; Separate h1 and img horizontally */
+  width: auto; /* Adjust the width as needed */
+  height: 300px; 
+  /*Adjust the height as needed */
+  /* border: 2px solid #f5b19d; Add a border to the container if desired */
+  padding: 20px; /* Add padding if needed */
+  justify-content: space-between;
+}
+
+.container h1 {
+  height: 50px;
+  letter-spacing: 6px;
+  border-bottom: 6px solid #f5b19d;
+  width: 100%;
+  text-align: center;
+  padding: 40px;
+}
+
+img {
+  display: flex;
+  border-radius: 50%;
+  width: 350px;
+  height: auto;
+  padding: 40px;
+  /* position: absolute; */
+  /* top: 20px; */
+  /* right:  250px; */
+
+}
+
+#searchtext {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  padding: 40px;
+  width: auto;
+  height: auto;
+}
+
+#searchtext h1 {
+  padding: 5px;
+  color: #4cb6b4;
+  /* float: inline-start; */
+}
+/* #searchtext h3 {
+  /* padding: 5px; */
+  /* float: inline-start; */
+ /*} */
+
+
+/* Drop Down Styles
+================================ */
+nav {
+  /* float: inline-start; */
+  display: flex;
+  flex: row;
+  align-self: flex-start;
+  color: #144f5d;
+  justify-content: center;
+  padding: 40px;
+}
+
+nav .drop-down {
+  list-style: none;
+  overflow: hidden; /* When ul height is reduced, ensure overflowing li are not shown */
+  height: 172px; /* 172px = (38 (li) + 5 (li border)) * 4 (number of li) */
+  width: 200px;
+  margin: 0 auto;
+  padding: 0;
+  text-align: center;
+  -webkit-transition: height 0.3s ease;
+  transition: height 0.3s ease;
+  border-radius: 30px;
+  border: 2px solid #f5b19d;
+  background: #4cb6b4;
+  font-size: 20px;
+  text-transform: capitalize;
+  letter-spacing: 3px;
+}
+
+nav .drop-down.closed {
+  /*  When toggled via jQuery this class will reduce the height of the ul which inconjuction
+      with overflow: hidden set on the ul will hide all list items apart from the first */
+  /* current li height 38px + 5px border */
+  height: 43px;
+}
+
+nav .drop-down select {
+  border-bottom: 5px solid #2c3e50;
+}
+
+nav .drop-down select a {
+  display: block;
+  color: #144f5d;
+  text-decoration: none;
+  padding: 10px; /* Larger touch target area */
+}
+
+nav .drop-down select:first-child a:after {
+  content: "\25BC";
+  float: right;
+  margin-left: -30px; /* Excessive -margin to bring link text back to center */
+  margin-right: 5px;
+}
+
+#card-container {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  align-self: flex-start;
+  gap: 1.5rem;
+  padding: 30px;
+  text-align: center;
+  background: transparent;
+  max-width: auto;
+  width: auto;
+  justify-content: space-between;
+  float: inline-start;
+}
+#card-container .infoContainer {
+  display: flex;
+  flex-direction: column;
+  text-align: center;
+  height: auto;
+  border-radius: 30px;
+  border: 2px solid #f5b19d;
+  box-shadow: 1px 1px 10px #144f5d;
+  transition: 0.3s;
+  padding: 40px;
+  background-color: #b0e7e8;
+}
+#cards-container .infoContainer h2 {
+  color: #144f5d;
+  font-weight: 400;
+}
+
+#cards-container .infoContainer:hover h3 {
+  transform: translate(-3.5rem, -3.5rem);
+}
+
+#card-container .infoContainer h3 {
+  letter-spacing: 8px;
+  border-bottom: 2px solid #4cb6b4;
+}
+
+#card-container .infoContainer h4 {
+  align-self: flex-end;
+  color: #4cb6b4;
+}
+
+.info {
+  display: block;
+  letter-spacing: 8px;
+  /* background-color: #1abc9c; */
+  border: 2px solid #f5b19d;
+  border-radius: 30px;
+  color: #144f5d;
+  text-align: center;
+  padding: 20px 16px;
+}
+
+#newwindow {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 1.5rem;
+  padding: 20px 16px;
+  text-align: center;
+  background: transparent;
+  max-width: auto;
+  width: auto;
+}
+
+#newwindow .container {
+  display: block;
+  text-align: center;
+  height: auto;
+  border-radius: 30px;
+  border: 2px solid #f5b19d;
+  box-shadow: 1px 1px 10px #2c3e50;
+  transition: 0.3s;
+  padding: 2rem;
+  background-color: #b0e7e8;
+}
+
+#newwindow .container h3 {
+  color: #144f5d;
+  /* font-weight: 400; */
+  /* letter-spacing: 8px; */
+  border-bottom: 2px solid white;
+}
+
+#newwindow .container h2 {
+  /* font-weight: 300; */
+  /* letter-spacing: 8px; */
+  color: #144f5d;
+}
+
+.footer_copyright {
+  float: inline-start;
+  padding: 2rem;
+  color: #144f5d;
+  background-color: #4cb6b4;
+}

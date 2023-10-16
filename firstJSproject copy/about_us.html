@@ -1,0 +1,148 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Roboto+Mono:wght@100&display=swap"
+      rel="stylesheet"
+    />
+    <style>
+      body {
+        margin: 0;
+        padding: 0;
+        font-family: "Roboto Mono", monospace;
+        background-color: #f4f3dd;
+      }
+
+      .header {
+        display: block;
+        padding: 20px 10px;
+        height: 50px;
+        width: 100%;
+        margin: 10px;
+      }
+
+      .header a {
+        text-align: center;
+        padding: 10px;
+        text-decoration: none;
+        border-radius: 30px;
+        border: 2px solid #f5b19d;
+        background-color: #4cb6b4;
+        color: white;
+      }
+
+      .container {
+        display: block;
+        padding: 50px;
+        width: auto;
+        height: auto;
+      }
+
+      .container img {
+        align-self: auto;
+        max-width: 100%;
+        max-height: 100%;
+        border-radius: 30px;
+        border: 4px solid #f5b19d;
+      }
+      .container h1 {
+        float: right;
+        justify-content: right;
+        letter-spacing: 6px;
+        color: #4cb6b4;
+        padding: 30px;
+      }
+      div  {
+        display: block;
+        box-sizing: inherit;
+        justify-content: center;
+        padding: 8px 8px 20px 20px;
+      }
+      /* .text {
+        background-color: #b0e7e8;
+        border-radius: 30px;
+        border: 4px solid #f5b19d;
+        padding: 30px;
+      } */
+      *::before,
+      *::after {
+        box-sizing: inherit;
+      }
+      #more {
+        display: none;
+      }
+
+      button {
+        color: #f5b19d;
+        background: transparent;
+        border: transparent;
+      }
+      button:hover {
+        cursor: pointer;
+        color: #4cb6b4;
+      }
+      .footer_copyright {
+        padding: 2rem;
+        color: #144f5d;
+        background-color: #4cb6b4;
+      }
+    </style>
+
+    <script>
+      function myFunction() {
+        let dots = document.getElementById("dots");
+        let moreText = document.getElementById("more");
+        let btnText = document.getElementById("myBtn");
+
+        if (dots.style.display === "none" || dots.style.display === "") {
+          dots.style.display = "inline";
+          btnText.innerHTML = "Read more";
+          moreText.style.display = "none";
+        } else {
+          dots.style.display = "none";
+          btnText.innerHTML = "Read less";
+          moreText.style.display = "inline";
+        }
+      }
+    </script>
+  </head>
+
+  <body>
+    <div class="header">
+      <a href="/firstJSproject/index.html">Home</a>
+    </div>
+
+    <div class="container">
+      <img src="/firstJSproject/assets/silhouette-683751_640.jpg" alt="nature" />
+      <h1>Here will be something</h1>
+    </div>
+
+    <div class="text">
+      <p>
+        Lorem ipsum dolor sit amet, consectetur adipiscing elit. Phasellus
+        imperdiet, nulla et dictum interdum, nisi lorem egestas vitae scel<span
+          id="dots"
+          >...</span
+        ><span id="more"
+          >erisque enim ligula venenatis dolor. Maecenas nisl est, ultrices nec
+          congue eget, auctor vitae massa. Fusce luctus vestibulum augue ut
+          aliquet. Nunc sagittis dictum nisi, sed ullamcorper ipsum dignissim
+          ac. In at libero sed nunc venenatis imperdiet sed ornare turpis. Donec
+          vitae dui eget tellus gravida venenatis. Integer fringilla congue eros
+          non fermentum. Sed dapibus pulvinar nibh tempor porta.</span
+        >
+      </p>
+
+      <button onclick="myFunction()" id="myBtn">Read more</button>
+    </div>
+
+    <div class="footer_copyright">
+      <p>&copy; 2023 Code Academy. Berlin. Ali Feruz</p>
+    </div>
+  </body>
+</html>
